@@ -5,6 +5,8 @@ import time
 # Remove a pausa de segurança para clicar na velocidade máxima
 pyautogui.PAUSE = 0.1
 
+tempo = int(input("Digite o tempo em segundos para o auto-clicker: "))
+
 
 print("--- AUTO-CLICKER TEMPORIZADO ---")
 print("Posicione o mouse onde você quer clicar AGORA!")
@@ -14,10 +16,10 @@ for i in range(5, 0, -1):
   print(f"Começando em {i}...")
   time.sleep(1)
 
-print("!!! CLICANDO (Duração: 30 segundos) !!!")
+print("!!! CLICANDO !!!")
 
-# Marca o horário de agora e calcula quando deve parar (daqui a 30s)
-tempo_parada = time.time() + 40
+# Marca o horário de agora e calcula quando deve parar
+tempo_parada = time.time() + tempo
 
 # Loop que continua rodando enquanto o tempo atual for menor que o tempo de parada
 while time.time() < tempo_parada:
